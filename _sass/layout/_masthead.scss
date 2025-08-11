@@ -1,0 +1,64 @@
+// Styling for the masthead
+header.masthead {
+  text-align: center;
+  color: white;
+  background-image: url("#{$header-image}");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  .intro-text {
+    padding-top: 105px;
+    padding-bottom: 70px;
+    .intro-lead-in {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 28px;
+      margin-bottom: 25px;
+      color: #f8f9fa;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      letter-spacing: 1px;
+      @include heading-font;
+    }
+    .intro-heading {
+      font-size: 54px;
+      font-weight: 800;
+      line-height: 54px;
+      margin-bottom: 25px;
+      color: #ffffff;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+      letter-spacing: 2px;
+      @include heading-font;
+    }
+  }
+}
+@media (min-width: 768px) {
+  header.masthead {
+    .intro-text {
+      padding-top: 210px;
+      padding-bottom: 140px;
+      .intro-lead-in {
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 46px;
+        margin-bottom: 30px;
+        color: #f8f9fa;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        letter-spacing: 1.5px;
+        @include heading-font;
+      }
+      .intro-heading {
+        font-size: 80px;
+        font-weight: 800;
+        line-height: 80px;
+        margin-bottom: 50px;
+        color: #ffffff;
+        text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+        letter-spacing: 3px;
+        @include heading-font;
+      }
+    }
+  }
+}
