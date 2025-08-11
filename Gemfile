@@ -1,6 +1,11 @@
-#after any changes to the Gemfile, execute bundle update!
 source "https://rubygems.org"
-gemspec
+
+# GitHub Pages gem for compatibility
+gem "github-pages", group: :jekyll_plugins
+
+# Jekyll and plugins
+gem "jekyll", "~> 3.9"
+gem "kramdown-parser-gfm"
 
 # Delete the following lines if not on Windows: 
 # Performance-booster for watching directories on Windows
