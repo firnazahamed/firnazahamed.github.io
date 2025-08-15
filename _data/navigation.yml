@@ -17,8 +17,10 @@ en: &DEFAULT_EN
       section: portfolio
     - title: "About"
       section: about
-    - title: "Timeline"
+    - title: "Journey"
       section: timeline
+    - title: "Certifications"
+      section: certifications
     - title: "LinkedIn"
       url: https://www.linkedin.com/in/firnaz-ahamed
 

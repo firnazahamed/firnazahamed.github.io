@@ -9,21 +9,26 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-8 mx-auto text-center">
-        <div class="large text-muted">{{ site.data.sitetext[site.locale].about.body | markdownify }}</div>
-        {% if site.data.sitetext[site.locale].about.social %}
-        <div class="about-social mt-4">
-          <ul class="list-inline">
-            {% for link in site.data.sitetext[site.locale].about.social %}
-            <li class="list-inline-item">
-              <a href="{{ link.url }}" class="about-social-link" target="_blank">
-                <i class="{{ link.icon }}"></i>
-              </a>
-            </li>
-            {% endfor %}
-          </ul>
+      <div class="col-12">
+        <div class="about-content-wrapper">
+          <div class="about-image-float">
+            <img src="assets/img/firnaz.png" alt="Firnaz Ahamed" class="img-fluid rounded-circle about-profile-img">
+          </div>
+          <div class="large text-muted about-text-content">{{ site.data.sitetext[site.locale].about.body | markdownify }}</div>
+          {% if site.data.sitetext[site.locale].about.social %}
+          <div class="about-social mt-4">
+            <ul class="list-inline">
+              {% for link in site.data.sitetext[site.locale].about.social %}
+              <li class="list-inline-item">
+                <a href="{{ link.url }}" class="about-social-link" target="_blank">
+                  <i class="{{ link.icon }}"></i>
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
         </div>
-        {% endif %}
       </div>
     </div>
   </div>
@@ -38,21 +43,26 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-8 mx-auto text-center">
-        <div class="large text-muted">{{ site.data.sitetext.about.body | markdownify }}</div>
-        {% if site.data.sitetext.about.social %}
-        <div class="about-social mt-4">
-          <ul class="list-inline">
-            {% for link in site.data.sitetext.about.social %}
-            <li class="list-inline-item">
-              <a href="{{ link.url }}" class="about-social-link" target="_blank">
-                <i class="{{ link.icon }}"></i>
-              </a>
-            </li>
-            {% endfor %}
-          </ul>
+      <div class="col-12">
+        <div class="about-content-wrapper">
+          <div class="about-image-float">
+            <img src="assets/img/firnaz.png" alt="Firnaz Ahamed" class="img-fluid rounded-circle about-profile-img">
+          </div>
+          <div class="large text-muted about-text-content">{{ site.data.sitetext.about.body | markdownify }}</div>
+          {% if site.data.sitetext.about.social %}
+          <div class="about-social mt-4">
+            <ul class="list-inline">
+              {% for link in site.data.sitetext.about.social %}
+              <li class="list-inline-item">
+                <a href="{{ link.url }}" class="about-social-link" target="_blank">
+                  <i class="{{ link.icon }}"></i>
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
         </div>
-        {% endif %}
       </div>
     </div>
   </div>

@@ -1,0 +1,102 @@
+<!-- Certifications -->
+{% if site.locale and site.locale != "" and site.locale != nil %}
+<section class="page-section" id="{{ site.data.sitetext[site.locale].certifications.section | default: "certifications" }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].certifications.title | default: "Certifications" }}</h2>
+        <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].certifications.text | markdownify }}</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="certifications-container">
+          <div class="certifications-wrapper" {% if site.data.sitetext[site.locale].certifications.horizontal-scrolling == "yes" %} id="scrolling-certifications" {% endif %}>
+            {% for cert in site.data.sitetext[site.locale].certifications.list %}
+            <div class="certification-item">
+              {% if cert.credential_url %}
+              <a href="{{ cert.credential_url }}" target="_blank" class="certification-link">
+              {% endif %}
+                <div class="certification-card">
+                  <div class="certification-icon">
+                    <i class="{{ cert.icon }}"></i>
+                  </div>
+                  <div class="certification-info">
+                    <h4 class="certification-title">{{ cert.title }}</h4>
+                    <p class="certification-org">{{ cert.organization }}</p>
+                    <p class="certification-date">{{ cert.date }}</p>
+                  </div>
+                </div>
+              {% if cert.credential_url %}
+              </a>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+          {% if site.data.sitetext[site.locale].certifications.horizontal-scrolling == "yes" %}
+          <button class="scroll-btn scroll-left" onclick="scrollCertifications('left')">&lt;</button>
+          <button class="scroll-btn scroll-right" onclick="scrollCertifications('right')">&gt;</button>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% else %}
+<section class="page-section" id="{{ site.data.sitetext.certifications.section | default: "certifications" }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">{{ site.data.sitetext.certifications.title | default: "Certifications" }}</h2>
+        <h3 class="section-subheading text-muted">{{ site.data.sitetext.certifications.text | markdownify }}</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="certifications-container">
+          <div class="certifications-wrapper" {% if site.data.sitetext.certifications.horizontal-scrolling == "yes" %} id="scrolling-certifications" {% endif %}>
+            {% for cert in site.data.sitetext.certifications.list %}
+            <div class="certification-item">
+              {% if cert.credential_url %}
+              <a href="{{ cert.credential_url }}" target="_blank" class="certification-link">
+              {% endif %}
+                <div class="certification-card">
+                  <div class="certification-icon">
+                    <i class="{{ cert.icon }}"></i>
+                  </div>
+                  <div class="certification-info">
+                    <h4 class="certification-title">{{ cert.title }}</h4>
+                    <p class="certification-org">{{ cert.organization }}</p>
+                    <p class="certification-date">{{ cert.date }}</p>
+                  </div>
+                </div>
+              {% if cert.credential_url %}
+              </a>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+          {% if site.data.sitetext.certifications.horizontal-scrolling == "yes" %}
+          <button class="scroll-btn scroll-left" onclick="scrollCertifications('left')">&lt;</button>
+          <button class="scroll-btn scroll-right" onclick="scrollCertifications('right')">&gt;</button>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<script>
+function scrollCertifications(direction) {
+  const container = document.getElementById('scrolling-certifications');
+  const scrollAmount = 300;
+  
+  if (direction === 'left') {
+    container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  } else {
+    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  }
+}
+</script>
+<!-- End Certifications -->

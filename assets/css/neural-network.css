@@ -1,0 +1,291 @@
+/* Neural Network Animation Styles */
+.neural-network-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.neural-network {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, #2d1b69 0%, #0c0c0c 50%, #000000 100%);
+  overflow: hidden;
+}
+
+/* Neural Network Nodes */
+.node {
+  position: absolute;
+  border-radius: 50%;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.node.particle {
+  width: 2px;
+  height: 2px;
+  background: #ffffff;
+  box-shadow: 0 0 4px #ffffff, 0 0 8px #7c4dff;
+  opacity: 0.6;
+}
+
+.node.small {
+  width: 4px;
+  height: 4px;
+  background: #7c4dff;
+  box-shadow: 0 0 8px #7c4dff, 0 0 16px #7c4dff;
+  opacity: 0.8;
+}
+
+.node.medium {
+  width: 6px;
+  height: 6px;
+  background: #3f51b5;
+  box-shadow: 0 0 12px #3f51b5, 0 0 24px #3f51b5, 0 0 36px #3f51b5;
+  opacity: 0.9;
+}
+
+.node.large {
+  width: 10px;
+  height: 10px;
+  background: #2196f3;
+  box-shadow: 0 0 20px #2196f3, 0 0 40px #2196f3, 0 0 60px #2196f3;
+}
+
+.node.star {
+  width: 3px;
+  height: 3px;
+  background: #ffffff;
+  box-shadow: 0 0 15px #ffffff, 0 0 30px #ffffff, 0 0 45px #7c4dff;
+  opacity: 0.9;
+}
+
+.node.depth-1 {
+  filter: blur(0.5px);
+  opacity: 0.7;
+  transform: scale(0.8);
+}
+
+.node.depth-2 {
+  filter: blur(1px);
+  opacity: 0.5;
+  transform: scale(0.6);
+}
+
+.node.depth-3 {
+  filter: blur(1.5px);
+  opacity: 0.3;
+  transform: scale(0.4);
+}
+
+/* Connection Lines */
+.connection {
+  position: absolute;
+  height: 1px;
+  transform-origin: left center;
+  opacity: 0.4;
+  animation: signal 4s ease-in-out infinite;
+}
+
+.connection.thin {
+  height: 0.5px;
+  background: linear-gradient(90deg, transparent, #7c4dff, transparent);
+  box-shadow: 0 0 3px #7c4dff;
+}
+
+.connection.medium {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #3f51b5, transparent);
+  box-shadow: 0 0 6px #3f51b5;
+}
+
+.connection.thick {
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, #2196f3, transparent);
+  box-shadow: 0 0 10px #2196f3, 0 0 20px #2196f3;
+}
+
+.connection.active {
+  animation: activeSignal 2s ease-in-out infinite;
+  opacity: 0.9;
+}
+
+.connection.depth-1 {
+  opacity: 0.3;
+  filter: blur(0.5px);
+}
+
+.connection.depth-2 {
+  opacity: 0.2;
+  filter: blur(1px);
+}
+
+.connection.depth-3 {
+  opacity: 0.1;
+  filter: blur(1.5px);
+}
+
+/* Welcome Text Overlay */
+.welcome-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+  color: white;
+}
+
+.welcome-text {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  margin: 0;
+  opacity: 0;
+  animation: fadeInUp 2s ease-out 0.5s forwards;
+  letter-spacing: 2px;
+}
+
+.welcome-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeInUp 2s ease-out 1.5s forwards;
+  color: #81d4fa;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  33% {
+    transform: scale(1.1);
+    filter: brightness(1.3);
+  }
+  66% {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+}
+
+@keyframes signal {
+  0% {
+    opacity: 0.2;
+    transform: scaleX(0);
+    filter: brightness(0.8);
+  }
+  25% {
+    opacity: 0.4;
+    transform: scaleX(0.3);
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scaleX(0.8);
+    filter: brightness(1.2);
+  }
+  75% {
+    opacity: 0.5;
+    transform: scaleX(1);
+    filter: brightness(1);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scaleX(0);
+    filter: brightness(0.8);
+  }
+}
+
+@keyframes activeSignal {
+  0% {
+    opacity: 0.3;
+    transform: scaleX(0);
+    filter: brightness(1) drop-shadow(0 0 5px #ffffff);
+  }
+  25% {
+    opacity: 0.7;
+    transform: scaleX(0.4);
+    filter: brightness(1.4) drop-shadow(0 0 10px #7c4dff);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(0.8);
+    filter: brightness(1.8) drop-shadow(0 0 15px #ffffff);
+  }
+  75% {
+    opacity: 0.8;
+    transform: scaleX(1);
+    filter: brightness(1.4) drop-shadow(0 0 10px #7c4dff);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scaleX(0);
+    filter: brightness(1) drop-shadow(0 0 5px #ffffff);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .welcome-text {
+    font-size: 2.5rem;
+  }
+  
+  .welcome-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .node {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .node.large {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .connection {
+    height: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-text {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  .welcome-subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .node, .connection, .welcome-text, .welcome-subtitle {
+    animation: none;
+  }
+  
+  .welcome-text, .welcome-subtitle {
+    opacity: 1;
+    transform: none;
+  }
+}
