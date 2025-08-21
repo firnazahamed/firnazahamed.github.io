@@ -1,41 +1,35 @@
 ---
-title: Web Scraping Cricinfo Data
-subtitle: Technical blog post on extracting cricket statistics using Python web scraping techniques.
-image: assets/img/portfolio/medium-article.png
-alt: Web Scraping Cricinfo Data Visualization
+title: Cricket Fantasy Webapp
+subtitle: Interactive Streamlit application for cricket team analysis and fantasy league insights.
+image: assets/img/portfolio/cricket-fantasy-screenshot.png
+alt: Cricket Fantasy Webapp Screenshot
 
 caption:
-  title: Cricinfo Web Scraping
-  subtitle: Technical Blog & Tutorial
-  thumbnail: assets/img/portfolio/web-scraping.png
+  title: Cricket Fantasy
+  subtitle: Data Science Web Application
+  thumbnail: assets/img/portfolio/cricket-overview.png
 ---
 
-A comprehensive **technical blog post** published on Medium's "The Startup" publication, demonstrating advanced web scraping techniques to extract cricket data from ESPN Cricinfo. This project combines my passion for cricket with expertise in data extraction and Python programming.
+A comprehensive **Streamlit web application** that combines my passion for cricket with data science expertise. This interactive webapp provides fantasy cricket insights and team analysis using real-time data and statistical modeling.
 
-**Technical Highlights:**
-- **Web Scraping Framework**: Detailed implementation using Python's BeautifulSoup and Requests libraries
-- **Data Structure Analysis**: Breaking down HTML structure of Cricinfo pages for efficient data extraction
-- **Error Handling**: Robust scraping methods with proper exception handling and rate limiting
-- **Data Processing**: Clean, structured data extraction from complex cricket statistics pages
+**Key Features:**
+- **Interactive Dashboard**: User-friendly interface built with Streamlit for seamless navigation
+- **Player Analytics**: Statistical analysis of player performance metrics and historical data
+- **Fantasy Team Optimization**: Data-driven recommendations for fantasy cricket team selection
+- **Real-time Insights**: Dynamic visualizations and charts for informed decision-making
 
-**Key Learning Outcomes:**
-- **HTML Parsing**: Advanced techniques for navigating complex DOM structures
-- **Data Cleaning**: Processing raw scraped data into usable formats for analysis
-- **Ethical Scraping**: Best practices for respectful web scraping including delays and robots.txt compliance
-- **Real-world Application**: Practical demonstration using actual cricket data sources
+**Technical Implementation:**
+- **Python & Streamlit**: Core framework for web application development
+- **Pandas & NumPy**: Data manipulation and statistical analysis
+- **Plotly/Matplotlib**: Interactive data visualizations
+- **Data Processing**: Automated data pipelines for cricket statistics
 
-**Impact & Recognition:**
-- **Published on Medium**: Featured in "The Startup" publication with significant reader engagement
-- **Educational Value**: Serves as a tutorial for aspiring data scientists interested in sports analytics
-- **Technical Depth**: Covers both beginner and intermediate web scraping concepts
-- **Domain Expertise**: Showcases knowledge of both cricket statistics and data extraction techniques
+This project showcases my ability to transform sports analytics into user-friendly applications, combining domain expertise in cricket with technical skills in data science and web development.
 
-This blog post demonstrates my ability to communicate complex technical concepts clearly while applying data science skills to real-world problems in sports analytics.
-
-**[📖 Read Full Article on Medium](https://medium.com/swlh/web-scraping-cricinfo-data-c134fce79a33)**
+**[🔗 View Live Application](https://summer-is-coming-2025.streamlit.app/)**
 
 {:.list-inline}
 
-- Date: June 28, 2020 Published on Medium
-- Technology: Python, BeautifulSoup, Requests, Data Extraction
-- Category: Web Scraping & Technical Writing
+- Date: 2024-2025
+- Technology: Python, Streamlit, Data Science
+- Category: Web Application & Sports Analytics
